@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: hsl(234, 29%, 20%) ;
+        }
+        main{
+            max-width: 400px;
+            padding: 20px 50px;
+            /* border: 1px solid red; */
+            background-color: white;
+            border-radius: 30px;
+            margin: 100px auto 0px;
+
+            @media (max-width:450px) {
+                padding: 20px 30px;
+            }
+
+            #image img{
+                width: 50px;
+                height: 50px;
+                margin: 20px 0px;
+                @media (max-width:450px) {
+                    margin: 15px 0;
+                }
+
+            }
+
+
+            #content{
+                /* border: 1px solid blue; */
+                margin-bottom: 30px;
+
+                >h1{
+                    font-size: 45px;
+                }
+                >button{
+                    display: block;
+                    width: 100%;
+                    margin: 0px auto;
+                    margin-top: 50px;
+                    height: 50px;
+                    font-weight: 900;
+                    font-size: 24px;
+                    letter-spacing: 2px;
+                    border: 5px solid rgb(0, 0, 0);
+                    border-radius: 30px;
+                    background-color: #ff3300;
+
+                    @media (max-width:450px) {
+                    margin-top: 40px;
+                    height: 50px;
+                    font-size: 19px;
+                    letter-spacing: 0px;
+                    }
+
+                }
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <main>
+        <div id="image">
+            <img src="/images/images.png" alt="">
+        </div>
+        <div id="content">
+             <h1>Thanks for <br> subscribing!</h1>
+            <p> A confirmation email has been sent to <br> <b> <i>example99@gmail.com</i></b>. Please open it and click the button inside to confirm your subscrition</p>
+            <button> Dismiss message</button>
+
+        </div>
+        
+    </main>
+
+    
+</body>
+</html>
