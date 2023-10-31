@@ -5,8 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        @font-face {
+            font-family: 'Roboto';
+            src: url('./images/fonts/Roboto-Bold.ttf');
+            src: url('./images/fonts/Roboto-Regular.ttf');
+        }
         body{
-            background-color: hsl(234, 29%, 20%) ;
+            font-family: 'Roboto', sans-serif;
+            color: rgb(19, 13, 55);
+            background-color: hsl(234, 29%, 20%);
         }
         main{
             max-width: 400px;
@@ -23,7 +30,7 @@
             #image img{
                 width: 50px;
                 height: 50px;
-                margin: 20px 0px;
+                margin: 20px 0px -10px;
                 @media (max-width:450px) {
                     margin: 15px 0;
                 }
@@ -37,19 +44,21 @@
 
                 >h1{
                     font-size: 45px;
+                    margin-bottom: 10px;
                 }
                 >button{
                     display: block;
                     width: 100%;
                     margin: 0px auto;
-                    margin-top: 50px;
-                    height: 50px;
+                    margin-top: 30px;
+                    height: 60px;
                     font-weight: 900;
-                    font-size: 24px;
+                    font-size: medium;
                     letter-spacing: 2px;
-                    border: 5px solid rgb(0, 0, 0);
-                    border-radius: 30px;
-                    background-color: #ff3300;
+                    border: none;
+                    border-radius: 8px;
+                    background: rgb(19, 13, 55);
+                    color: #fff;
 
                     @media (max-width:450px) {
                     margin-top: 40px;
@@ -57,7 +66,11 @@
                     font-size: 19px;
                     letter-spacing: 0px;
                     }
-
+                }
+                >button:hover{
+                    cursor: pointer;
+                    background-image: linear-gradient(to right,#ff527a,#ff6548);;
+                    box-shadow: 0px 5px 30px 15px #f6e0dc;
                 }
             }
 
@@ -69,17 +82,23 @@
 
     <main>
         <div id="image">
-            <img src="/images/images.png" alt="">
+            <img src="./images/icon-success.svg" alt="">
         </div>
         <div id="content">
              <h1>Thanks for <br> subscribing!</h1>
-            <p> A confirmation email has been sent to <br> <b> <i>example99@gmail.com</i></b>. Please open it and click the button inside to confirm your subscrition</p>
-            <button> Dismiss message</button>
+            <p> A confirmation email has been sent to <br> <b>ash@loremcompany.com</b>. Please open it and click the button inside to confirm your subscription.</p>
+            <button id="dismiss_btn"> Dismiss message</button>
 
         </div>
         
     </main>
 
+    <script>
+        document.getElementById('dismiss_btn').addEventListener('click', (e) => {
+            e.preventDefault();
+            window.location ='news_signUp_Form.html';
+        });
+    </script>
     
 </body>
 </html>
